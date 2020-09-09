@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$ Calcule sua Renda $"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+
+    <TextView
+        android:id="@+id/titulo_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Digite seu nome"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        tools:layout_editor_absoluteX="68dp" />
+
+
+    <EditText
+        android:id="@+id/text_nome"
+        android:layout_width="274dp"
+        android:layout_height="46dp"
+        android:inputType="text"
+        android:hint="Nome"
+        app:layout_constraintTop_toBottomOf="@id/titulo_nome"
+        tools:layout_editor_absoluteX="68dp" />
+
+    <TextView
+        android:id="@+id/titulo_salario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Digite seu Salário"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/text_nome"
+        tools:layout_editor_absoluteX="68dp" />
+
+    <EditText
+        android:id="@+id/text_salario"
+        android:layout_width="274dp"
+        android:layout_height="46dp"
+        android:hint="Salário"
+        android:inputType="numberDecimal"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/titulo_salario"
+        tools:layout_editor_absoluteX="68dp" />
+
+    <TextView
+        android:id="@+id/titulo_periodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Digite o Período"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/text_salario"
+        tools:layout_editor_absoluteX="68dp" />
+
+    <EditText
+        android:id="@+id/text_tempo"
+        android:layout_width="274dp"
+        android:layout_height="46dp"
+        android:hint="Tempo"
+        android:inputType="number"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/titulo_periodo"
+        tools:layout_editor_absoluteX="68dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Calcular"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="455dp"
+        app:layout_constraintTop_toBottomOf="@id/text_tempo"
+        android:onClick="clicaNiMin"/>
+
+    <TextView
+        android:id="@+id/text_final"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        tools:layout_editor_absoluteX="55dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
